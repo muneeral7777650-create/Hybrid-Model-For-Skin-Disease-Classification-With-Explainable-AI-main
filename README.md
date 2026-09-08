@@ -4,6 +4,27 @@
 
 This project implements a comprehensive skin disease classification system using deep learning models and explainable AI techniques. The system classifies skin lesions into 7 categories using the HAM10000 dataset and provides visual explanations for model predictions through Grad-CAM, LIME, and SHAP techniques.
 
+## 🚀 Streamlit Deployment
+
+This repository is configured for deployment through Streamlit using the app entry point in `app.py`.
+
+### Local run
+```bash
+pip install -r requirements.txt
+streamlit run app.py
+```
+
+### Hosting environment
+- Set the app main file to `app.py`
+- Keep `requirements.txt` in the project root
+- Optional environment variable for the model file:
+```bash
+MODEL_PATH=./efficientnet_model.pth
+```
+- For Streamlit Cloud, the app will run in demo mode if no trained weights file is found, but the UI remains functional.
+
+> Note: The older training scripts in this repository still contain local Windows paths and are intended for research/training on a personal machine, not for live hosted deployment.
+
 ### 🎯 Project Goals
 - **Classification**: Accurately classify skin lesions into 7 categories
 - **Model Comparison**: Compare performance of EfficientNet, Vision Transformer, and hybrid approaches

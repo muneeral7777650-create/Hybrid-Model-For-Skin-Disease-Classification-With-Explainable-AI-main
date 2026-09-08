@@ -10,4 +10,4 @@ lime
 shap
 imageio
 opencv-python-headless
-matplotlib
+streamlit
